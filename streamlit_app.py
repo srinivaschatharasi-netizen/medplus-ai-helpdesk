@@ -1,6 +1,31 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+st.set_page_config(
+    page_title="MedPlus AI Helpdesk",
+    page_icon="🤖",
+    layout="wide"
 )
+
+st.title("🤖 MedPlus AI Helpdesk")
+
+st.markdown("### Welcome to MedPlus IT Support")
+
+issue = st.selectbox(
+    "Select your issue",
+    [
+        "Internet",
+        "POS",
+        "Printer",
+        "Monitor",
+        "Telephone",
+        "Barcode Scanner",
+        "Biometric",
+        "CCTV",
+        "TV"
+    ]
+)
+
+st.write("Selected Issue:", issue)
+
+if st.button("Start Troubleshooting"):
+    st.success(f"Starting troubleshooting for {issue}...")
