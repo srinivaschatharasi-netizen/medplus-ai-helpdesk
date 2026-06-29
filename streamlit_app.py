@@ -29,3 +29,4 @@ st.write("Selected Issue:", issue)
 
 if st.button("Start Troubleshooting"):
     st.success(f"Starting troubleshooting for {issue}...")
+ 
